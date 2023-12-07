@@ -1,3 +1,6 @@
+import InputView from './view/InputView.js';
+import OutputView from './view/OutputView.js';
+
 const SAMPLE = {
 	일식: '규동, 우동, 미소시루, 스시, 가츠동, 오니기리, 하이라이스, 라멘, 오코노미야끼',
 	한식: '김밥, 김치찌개, 쌈밥, 된장찌개, 비빔밥, 칼국수, 불고기, 떡볶이, 제육볶음',
@@ -8,7 +11,9 @@ const SAMPLE = {
 };
 
 class App {
-  async play() {}
+  async play() {
+		OutputView.startGuide();
+	}
 }
 
 export default App;
