@@ -1,16 +1,14 @@
 class Coach {
   #name;
 
-  #inedibleMenus = [];
-
-  #weekdayLunchs = [];
+  #inedibleMenus;
 
   constructor(name) {
     this.#name = name;
   }
 
   inedibleMenus(menus) {
-    this.#inedibleMenus.push(menus.split(','));
+    this.#inedibleMenus = menus.split(',');
   }
 
   getCoach() {
