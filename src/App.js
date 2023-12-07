@@ -16,6 +16,10 @@ class App {
   async play() {
 		OutputView.startGuide();
 		const coachs = new Coachs(await InputView.coachNames());
+		for (let i =0; i < coachs.getCoachs().length; i++) {
+			coachs.addInedibleMenus(await InputView.inedibleMenus(coachs.getCoachs()[i].name), i);
+		}
+
 		console.log(coachs.getCoachs());
 	}
 }
