@@ -8,7 +8,7 @@ const OutputView = {
   result(state) {
     this.printMessage('\n메뉴 추천 결과입니다.');
     state.map((_, index) => {
-      this.printMessage(`[ ${state[index]}]`);
+      this.printMessage(`[ ${state[index]} ]`);
     })
   },
 

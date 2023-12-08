@@ -28,7 +28,7 @@ class Coachs {
   }
 
   result() {
-    return (this.menu.getWeekdayMenu().concat(this.#state)).map((arr) => arr.join('| '));
+    return (this.menu.getWeekdayMenu().concat(this.#state)).map((arr) => arr.join(' | '));
   }
 
   getCoachs() {

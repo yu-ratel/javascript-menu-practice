@@ -1,5 +1,4 @@
 import { Random } from '@woowacourse/mission-utils';
-import random from '../util/random.js';
 
 class Menu {
   SAMPLE = {
@@ -40,7 +39,9 @@ class Menu {
 
     while (menus.length < 5) {
       const target = this.#categorys[menus.length + 1];
-      const randomMenu = random.shuffle(this.SAMPLE[target].split(','))[0].trim();
+      const arr = new Array(target.length).fill(0).map((_, i) => i + 1);
+      const randomMenuIndex = Random.shuffle(arr)[0];
+      const randomMenu = this.SAMPLE[target].split(',')[randomMenuIndex - 1].trim();
       
       if (menus.includes(randomMenu) || inedibleMenus.includes(randomMenu)) {
         continue;
